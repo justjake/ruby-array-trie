@@ -17,7 +17,7 @@ Trie-like, prefix-tree data structures. First, a prefix-tree based on Arrays, wh
 
 Both of these data structures are implemented in terms of hashes.
   EOS
-  spec.homepage      = "https://github.com/justjake/array-trie"
+  spec.homepage      = "https://github.com/justjake/ruby-array-trie"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -29,4 +29,5 @@ Both of these data structures are implemented in terms of hashes.
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.7"
+  spec.add_development_dependency "pry"
 end
