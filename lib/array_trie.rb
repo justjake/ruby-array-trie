@@ -9,6 +9,8 @@
 # {ArrayTrie::PrefixTrie}, which can map arbitrary keys to values, so long as
 # your keys can be converted to and from arrays.
 class ArrayTrie
+  require 'array_trie/version'
+
   # Just a unique marker value.
   # Using Class.new is better than using Object.new, because it makes sense
   # when inspected.

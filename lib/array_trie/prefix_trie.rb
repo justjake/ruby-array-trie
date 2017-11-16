@@ -1,3 +1,5 @@
+require 'array_trie'
+
 class ArrayTrie
   # A trie-like, prefix-tree data structure that maps arbitrary keys to values,
   # provided that the keys may be transformed to and from arrays, as each
