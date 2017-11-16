@@ -9,18 +9,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jake Teton-Landis"]
   spec.email         = ["jake.tl@airbnb.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = <<-EOS
+Trie-like, prefix-tree data structures that maps from ordered keys to values.
+  EOS
+  spec.description   = <<-EOS
+Trie-like, prefix-tree data structures. First, a prefix-tree based on Arrays, which differs from a traditional trie, which maps strings to values. Second, a more general prefix-tree data structure that works for any type of keys, provided those keys can be transformed to and from an array.
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+Both of these data structures are implemented in terms of hashes.
+  EOS
+  spec.homepage      = "https://github.com/justjake/array-trie"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -31,4 +28,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.7"
 end
