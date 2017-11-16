@@ -1,7 +1,7 @@
 # ArrayTrie
 
 [![Ruby gem](https://img.shields.io/gem/v/array_trie.svg)](https://rubygems.org/gems/array_trie)
-[API docs](https://www.rubydoc.info/gems/array_trie)
+[API docs](http://www.rubydoc.info/gems/array_trie)
 
 Trie-like, prefix-tree data structures. First, a prefix-tree based on Arrays, which differs from a traditional trie, which maps strings to values. Second, a more general prefix-tree data structure that works for any type of keys, provided those keys can be transformed to and from an array.
 
@@ -52,11 +52,11 @@ paths.count_prefix('/usr/local')
 # You can obtain a subtrie to operate on a subsection of your trie
 usr_local = paths.subtrie('/usr/local')
 usr_local['bin/ruby']
-# => 'executable'
+# => "executable"
 
 usr_local['bin/fish'] = 'executable'
 paths['/usr/local/bin/fish']
-# => executable
+# => "executable"
 
 # Use #breadth_first and #depth_first to enumarate your keys and values
 paths.breadth_first do |k, v|
@@ -69,10 +69,11 @@ end
 # These methods return Enumerators, so you can use them with #map, etc.
 enum = paths.depth_first
 as_hash = Hash[enum.to_a]
-# => {
-# "/usr/local/bin/ruby"=>"executable",
-# "/usr/local/etc/nginx/nginx.cfg"=>"config file",
-# "/bin/bash"=>"executable"}
+# =>  {
+# ...   "/usr/local/bin/ruby"=>"executable",
+# ...   "/usr/local/etc/nginx/nginx.cfg"=>"config file",
+# ...   "/bin/bash"=>"executable"
+# ... }
 ```
 
 ## Development
